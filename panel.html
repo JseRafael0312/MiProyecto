@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Empresas | Reverso</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2>Solicitudes Recientes de Clientes</h2>
+
+  <div class="filter">
+    <select>
+      <option>Categoría</option>
+    </select>
+    <select>
+      <option>Subcategoría</option>
+    </select>
+    <input type="text" placeholder="Ubicación" />
+    <button>🔍 Buscar</button>
+  </div>
+
+  <!-- Ejemplo de solicitud -->
+  <div class="solicitud">
+    <p><strong>Solicitud:</strong> Pantalla para Samsung A51</p>
+    <p><strong>Estado:</strong> Nuevo | <strong>Color:</strong> Negro</p>
+    <p><strong>Ubicación:</strong> Caracas | <strong>Fecha:</strong> 15/06</p>
+    <p><strong>Detalles:</strong> Desea pantalla original o compatible</p>
+    <button onclick="openModal('Pantalla para Samsung A51')">📤 Ofertar</button>
+  </div>
+
+  <!-- Más solicitudes pueden añadirse aquí -->
+
+  <!-- Modal de oferta -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3>Enviar Oferta</h3>
+      <p id="productoModal">Para: [Producto]</p>
+      <input type="text" placeholder="Precio propuesto">
+      <input type="text" placeholder="Tiempo de entrega (días)">
+      <textarea placeholder="Comentarios opcionales"></textarea>
+      <button onclick="sendOffer()">Enviar Oferta</button>
+      <button onclick="closeModal()">Cancelar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

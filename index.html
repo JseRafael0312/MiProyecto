@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reverso Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Publicar lo que Necesitas</h2>
+
+  <form>
+    <div class="row">
+      <label>Categoría:</label>
+      <select><option>Seleccionar...</option></select>
+    </div>
+    <div class="row">
+      <label>Subcategoría:</label>
+      <select><option>Seleccionar...</option></select>
+    </div>
+    <div class="row">
+      <label>Cantidad:</label>
+      <input type="number" />
+    </div>
+    <div class="row">
+      <label>Estado:</label>
+      <select>
+        <option>Nuevo</option>
+        <option>Usado</option>
+        <option>Reacondicionado</option>
+      </select>
+    </div>
+    <div class="row">
+      <label>Marca:</label>
+      <input type="text" />
+    </div>
+    <div class="row">
+      <label>Modelo:</label>
+      <input type="text" />
+    </div>
+
+    <div class="checkbox-group">
+      <label><input type="checkbox" onclick="toggleField('talla')"> Talla/Medida</label>
+      <label><input type="checkbox" onclick="toggleField('material')"> Material</label>
+      <label><input type="checkbox" onclick="toggleField('color')"> Color</label>
+    </div>
+
+    <div class="row" id="talla-row" style="display:none;">
+      <label>Talla / Medida:</label>
+      <input type="text" />
+    </div>
+
+    <div class="row" id="material-row" style="display:none;">
+      <label>Material:</label>
+      <input type="text" />
+    </div>
+
+    <div class="row" id="color-row" style="display:none;">
+      <label>Color:</label>
+      <input type="text" />
+    </div>
+
+    <div class="row">
+      <label>Ubicación:</label>
+      <input type="text" placeholder="Ej: Caracas" />
+    </div>
+    <div class="row">
+      <label>¿Requiere Envío?</label>
+      <select>
+        <option>Sí</option>
+        <option>No</option>
+      </select>
+    </div>
+    <div class="row">
+      <label>Fecha necesaria:</label>
+      <input type="date" />
+    </div>
+    <div class="row">
+      <label>Garantía:</label>
+      <select>
+        <option>No</option>
+        <option>Sí (30 días)</option>
+        <option>Sí (3 meses)</option>
+        <option>Sí (1 año)</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>Descripción:</label>
+    </div>
+    <div>
+      <textarea placeholder="Describe lo que necesitas..."></textarea>
+    </div>
+    <button>📢 Publicar Solicitud</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
